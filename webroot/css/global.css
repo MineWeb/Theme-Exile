@@ -1,0 +1,10 @@
+@import "style.css";
+@import "nav.css";
+@import "error.css";
+@import "plugins.css";
+@import "footer.css";
+@import "home.css";
+
+body {
+    font-family: 'Nunito', sans-serif !important;
+}

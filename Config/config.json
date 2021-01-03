@@ -1,0 +1,22 @@
+{
+    "name": "Exile",
+    "slug": "Exile",
+    "author": "nivcoo",
+    "version": "1.0.0",
+    "apiID": 0,
+    "slider": false,
+    "configurations": {
+        "slider": "https:\/\/edensky.fr\/img\/uploads\/banner_22_09_2020.webp",
+        "ip": "PLAY.EDENSKY.FR",
+        "logo_url": "https:\/\/edensky.fr\/img\/uploads\/theme_logo.png",
+        "footer_desc": "Le serveur n'est en aucun cas affili\u00e9 \u00e0 minecraft.net ou mojang.com. Nous proposons un service pour tout \u00e2ge, de qualit\u00e9 et accessible gratuitement.",
+        "trailer_id": "z8TTE3ZgNBg",
+        "votes": {
+            "un": "1000 TOKENS",
+            "deux": "750 TOKENS",
+            "trois": "500 TOKENS"
+        },
+        "logo": false
+    },
+    "supported": {}
+}

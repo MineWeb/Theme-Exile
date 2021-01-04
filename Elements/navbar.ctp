@@ -95,14 +95,14 @@
                         <?php if ($isConnected): ?>
                             <li class="nav-item"><a
                                         class="<?php if ($this->here == "/profile") { ?>active<?php } ?> nav-link js-scroll-trigger"
-                                        href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>">
+                                        href="<?= $this->Html->url(['controller' => 'profile', 'action' => 'index', 'plugin' => null]) ?>">
                                     Mon profil </a></li>
                             <li class="nav-item"><a class=" nav-link js-scroll-trigger"
-                                                    href="<?= $this->Html->url(array('controller' => 'user', 'action' => 'logout', 'plugin' => null)) ?>">
+                                                    href="<?= $this->Html->url(['controller' => 'user', 'action' => 'logout', 'plugin' => null]) ?>">
                                     Déconnection </a></li>
                             <?php if ($Permissions->can('ACCESS_DASHBOARD')): ?>
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                                                        href="<?= $this->Html->url(array('controller' => '', 'action' => 'index', 'plugin' => 'admin')) ?>"><i
+                                                        href="<?= $this->Html->url(['controller' => '', 'action' => 'index', 'plugin' => 'admin']) ?>"><i
                                                 class="fa fa-cogs"> </i>
                                         Admin
                                     </a></li>
@@ -121,7 +121,7 @@
         <div class="row">
             <div class="col-md-4 offset-md-4 text-center" style="padding-top: 120px;">
                 <img width="250px" style="z-index:10;position:relative;"
-                     src="<?php if (empty($theme_config['logo'])) echo 'https://edensky.fr/img/uploads/theme_logo.png'; else echo $theme_config['logo']; ?>"/>
+                     src="<?php if (empty($theme_config['logo_url'])) echo 'https://edensky.fr/img/uploads/theme_logo.png'; else echo $theme_config['logo_url']; ?>"/>
             </div>
         </div>
     </div>

@@ -93,20 +93,20 @@
                                     </p>
 
                                     <form class="form-horizontal" method="POST" data-ajax="true"
-                                          action="<?= $this->Html->url(array('plugin' => 'TwoFactorAuth', 'admin' => false, 'controller' => 'UserLogin', 'action' => 'validEnable')) ?>"
+                                          action="<?= $this->Html->url(array('admin' => false, 'controller' => 'Authentification', 'action' => 'validEnable')) ?>"
                                           data-callback-function="afterValidQrCode">
                                         <div class="ajax-msg"></div>
 
                                         <div class="form-group text-center">
-                                            <label><?= $Lang->get('TWOFACTORAUTH__LOGIN_CODE') ?></label>
+                                            <label><?= $Lang->get('USER__LOGIN_CODE') ?></label>
                                             <div class="col-md-6" style="margin: 0 auto;float: none;">
                                                 <input type="text" class="form-control" name="code"
-                                                       placeholder="<?= $Lang->get('TWOFACTORAUTH__LOGIN_CODE_PLACEHOLDER') ?>">
+                                                       placeholder="<?= $Lang->get('USER__LOGIN_CODE_PLACEHOLDER') ?>">
                                             </div>
                                         </div>
 
                                         <button type="submit"
-                                                class="btn-pl"><?= $Lang->get('TWOFACTORAUTH__VALID_CODE') ?></button>
+                                                class="btn btn-info"><?= $Lang->get('USER__VALID_CODE') ?></button>
                                     </form>
                                 </div>
                                 <script type="text/javascript">
@@ -114,13 +114,11 @@
                                         e.preventDefault()
                                         var btn = $(this)
                                         var status = parseInt(btn.attr('data-status'))
-
                                         // disable
                                         btn.html('<i class="fa fa-refresh fa-spin"></i>').addClass('disabled')
-
                                         // request to server
                                         if (!status) { // enable
-                                            $.get('<?= $this->Html->url(array('controller' => 'UserLogin', 'action' => 'generateSecret', 'plugin' => 'TwoFactorAuth')) ?>', function (data) {
+                                            $.get('<?= $this->Html->url(array('controller' => 'Authentification', 'action' => 'generateSecret')) ?>', function (data) {
                                                 // add qrcode
                                                 $('#two-factor-auth-qrcode').attr('src', data.qrcode_url)
                                                 $('#two-factor-auth-secret').html(data.secret)
@@ -129,7 +127,7 @@
                                                 $('#twoFactorAuthValid').slideDown(150)
                                             })
                                         } else { // disable
-                                            $.get('<?= $this->Html->url(array('controller' => 'UserLogin', 'action' => 'disable', 'plugin' => 'TwoFactorAuth')) ?>', function (data) {
+                                            $.get('<?= $this->Html->url(array('controller' => 'Authentification', 'action' => 'disable')) ?>', function (data) {
                                                 // edit display
                                                 $('#toggleTwoFactorAuth').html('Voulez-vous activer la double authentification ?').removeClass('disabled').removeClass('btn-primary').addClass('btn-primary').attr('data-status', 0)
                                                 $('#twoFactorAuthStatusInfos').html('activer')

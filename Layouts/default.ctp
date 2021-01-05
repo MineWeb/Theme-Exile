@@ -5,14 +5,35 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=yes">
 	<meta name="author" content="nivcoo,Eywek">
+	<meta name="copyright" content="nivcoo,Eywek">
 
     <title><?= $seo_config['title'] ?></title>
     <link rel="icon" type="image/png" href="<?= $seo_config['favicon_url'] ?>"/>
     <meta name="title" content="<?= $seo_config['title'] ?>">
-    <meta property="og:title" content="<?= $seo_config['title'] ?>">
     <meta name="description" content="<?= $seo_config['description'] ?>">
+    <meta name="domain" content="<?= $_SERVER['HTTP_HOST'] ?>">
+    <meta property="og:title" content="<?= $seo_config['title'] ?>">
     <meta property="og:description" content="<?= $seo_config['description'] ?>">
     <meta property="og:image" content="<?= $seo_config['img_url'] ?>">
+    <meta property="og:site_name" content="<?= $website_name ?>">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta name="dcterms.type" content="Service">
+  	<meta name="dcterms.language" content="fr">
+  	<meta name="distribution" content="global">
+  	<meta name="Geography" content="France">
+  	<meta name="country" content="France">
+  	<meta name="theme-color" content="#007bff">
+    <meta name="msapplication-TileColor" content="#007bff">
+    <meta name="application-name" content="<?= $website_name ?>">
+    <meta name="apple-mobile-web-app-title" content="<?= $website_name ?>">
+
+    <!-- Référencement -->
+    <meta name="robots" content="index, follow, all">
+  	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  	<link rel="canonical" href="https://<?= $_SERVER['HTTP_HOST'] ?>">
+
 	<!-- CSS -->
 	<?= $this->Html->css('global.css') ?>
 	<?= $this->Html->css('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'); ?>
@@ -106,4 +127,3 @@
 <?= $configuration_end_code ?>
 </body>
 </html>
-

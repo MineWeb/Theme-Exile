@@ -99,7 +99,7 @@
                                     Mon profil </a></li>
                             <li class="nav-item"><a class=" nav-link js-scroll-trigger"
                                                     href="<?= $this->Html->url(['controller' => 'user', 'action' => 'logout', 'plugin' => null]) ?>">
-                                    Déconnection </a></li>
+                                    Déconnexion </a></li>
                             <?php if ($Permissions->can('ACCESS_DASHBOARD')): ?>
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger"
                                                         href="<?= $this->Html->url(['controller' => '', 'action' => 'index', 'plugin' => 'admin']) ?>"><i

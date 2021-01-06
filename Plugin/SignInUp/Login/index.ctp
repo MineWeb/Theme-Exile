@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="thumbnail text-center" style="padding:15px">
-                    <form id="login-before-two-factor-auth" class="sign__form" method="POST" data-ajax="true" action="<?= $this->Html->url(array('plugin' => null, 'admin' => false, 'controller' => 'user', 'action' => 'ajax_login')) ?>" data-callback-function="afterLogin">
+                    <form id="login-before-two-factor-auth" class="sign__form" method="POST" data-ajax="true" action="<?= $this->Html->url(array('plugin' => false, 'admin' => false, 'controller' => 'User', 'action' => 'ajax_login')) ?>" data-callback-function="afterLogin">
                         <input type="hidden" name="data[_Token][key]" value="<?= $csrfToken ?>" />
                         <div class="form-group">
                             <div class="input-group">
@@ -73,7 +73,7 @@
                         </div>
                     </form>
                     <form id="login-two-factor-auth" style="display:none;" class="form-horizontal" method="POST" data-ajax="true"
-                          action="<?= $this->Html->url(array('plugin' => 'TwoFactorAuth', 'admin' => false, 'controller' => 'UserLogin', 'action' => 'validLogin')) ?>"
+                          action="<?= $this->Html->url(array('plugin' => null, 'admin' => false, 'controller' => 'Authentification', 'action' => 'validLogin')) ?>"
                           data-redirect-url="?">
                         <div class="modal-body">
                             <div class="ajax-msg"></div>

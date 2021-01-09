@@ -10,7 +10,7 @@
                 
             </div>
             <div class="col-md-4 text-center">
-                <a href="/play" class="join">
+                <a href="<?= $theme_config['join_us_url'] ?>" class="join">
                 Toute les news
                 </a>
             </div>

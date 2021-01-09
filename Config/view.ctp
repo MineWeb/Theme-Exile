@@ -60,6 +60,15 @@
                                                name="trailer_id">
                                     </div>
 
+
+                                    <div class="form-group">
+                                        <label>Url du Bouton Nous-Rejoindre</label>
+                                        <p>Entrez l'url</p>
+                                        <input type="text" value="<?= $config['join_us_url'] ?>"
+                                               placeholder="Url" class="form-control"
+                                               name="join_us_url">
+                                    </div>
+
                                 </div>
                                 <div class="col-md-12">
                                     <hr>

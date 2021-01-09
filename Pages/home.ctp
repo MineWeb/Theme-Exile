@@ -11,7 +11,7 @@
 
             </div>
             <div class="col-md-4 text-center">
-                <a href="/play" class="join">
+                <a href="<?= $theme_config['join_us_url'] ?>" class="join">
                     <i class="fa fa-angle-right arrow"></i>
                     Nous rejoindre
                     <i class="fa fa-angle-left arrow-2"></i>

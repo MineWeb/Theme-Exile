@@ -16,8 +16,8 @@
             </div>
             <div class="col-md-4 text-right">
                 <div class="icon">
-                    <?= $theme_config['ip''] ?>
-                    <i id="copy-ip" data-clipboard-text="<?= $theme_config['ip''] ?>" class="fas fa-file" aria-hidden="true">
+                    <?= $theme_config['ip'] ?>
+                    <i id="copy-ip" data-clipboard-text="<?= $theme_config['ip'] ?>" class="fas fa-file" aria-hidden="true">
                     </i>
                     <?= $this->Html->script('clipboard.min.js') ?>
                     <script>
